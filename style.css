@@ -1,0 +1,159 @@
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 50px auto;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .form-group {
+        max-width: 100%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 1%;
+
+    }
+    label {
+        display: block;
+        margin-bottom: 1%;
+    }
+
+    .radio_value {
+        width: 40%;
+        display: inline-block;
+    }
+
+    .basic_name {
+        width: 40%;
+        display: inline-block;
+    }
+
+    .basic_name input[type="text"] {
+        width: 90%;
+    }
+
+    select {
+        width: 80%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="email"],
+    textarea {
+        width: 78%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .date-group input[type="number"] {
+        width: 21%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        display: inline-block;
+    }
+
+    .date-group span {
+        margin-right: 30px;
+    }
+
+    .skill-group select {
+        width: 40%;
+        display: inline-block;
+    }
+    .checkbox_value {
+        width: 25%;
+        display: inline-block;
+
+    }
+    .japan-group input[type="text"] {
+        width: 66%;
+        display: inline-block;
+    }
+    .date_group {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 130px;
+    }
+    .date_group input[type="text"] {
+        width: 24%;
+        display: inline-block;
+    }
+
+    .line {
+        border-style: solid;
+        margin-top: 3px;
+        margin-bottom: 25px;
+        border-radius: 1px;
+        border: 1px solid #ccc;
+    }
+
+    .add-more {
+        cursor: pointer;
+        color: blue;
+        margin-left: 10%;
+    }
+
+    .not_family_btn {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        height: 50px;
+        width: 15%;
+        display: block;
+        margin: auto;
+        margin-top: 3%;
+    }
+
+    .family_btn {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        height: 50px;
+        width: 20%;
+
+    }
+
+    #btn1 {
+        margin-top: 50px;
+        margin-left: 25%;
+    }
+
+    #btn2 {
+        margin-top: 50px;
+        margin-left: 100px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    a {
+        color: #fff;
+    }
+
+    .back-link {
+        cursor: pointer;
+        color: blue;
+        margin-left: 90%;
+    }
