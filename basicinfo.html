@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Basic Information</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/basicinfo.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<h2>基本情報\Basic Information</h2>
+		<form id="basicInfoForm">
+			<div class="form-group">
+				<label for="name">氏名(カタカナ)\Name in Kanji:</label>
+				<div class="name_group">
+					<div class="basic_name">
+						<span>氏:</span>
+						<input class="name" type="text" id="name" name="name" required>
+					</div>
+					<div class="basic_name">
+						<span>名:</span>
+						<input class="name" type="text" id="name" name="name" required>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="name">氏名(ローマ字)\Name in Roman:</label>
+				<div class="name_group">
+					<div class="basic_name">
+						<span>Family name:</span>
+						<input class="name" type="text" id="name" name="name" required>
+					</div>
+					<div class="basic_name">
+						<span>Given names:</span>
+						<input class="name" type="text" id="name" name="name" required>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label>性別\Sex:</label>
+					<div class="radio_value">
+						<input type="radio" id="male" name="gender" value="male" required>
+						<span>男Male</span>
+					</div>
+					<div class="radio_value">
+						<input type="radio" id="female" name="gender" value="female">
+						<span>女Female</span>
+					</div>
+			</div>
+			<div class="form-group">
+				<label for="nationality">国類\Nationality:</label>
+				<select id="nationality" name="nationality" required>
+					<option value="">国類を選択してください。Select Nationality</option>
+					<option value="myan">ミャンマー\Myanamr</option>
+					<option value="thai">タイ\Thai</option>
+					<option value="vitenam">ベトナム\Vitenam</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="placeOfBirth">出生地\Place of Birth:</label>
+				<input type="text" id="placeOfBirth" name="placeOfBirth" required>
+			</div>
+			<div class="form-group">
+				<label for="religion">宗教\Religion:</label>
+				<input type="text" id="religion" name="religion" required>
+			</div>
+			<div class="form-group">
+				<label for="dob">生年月日\Date of Birth:</label>
+				<div class="date-group">
+					<input type="number" id="dob" name="dob" required><span>年</span>
+					<input type="number" id="dob" name="dob" required><span>月</span>
+					<input type="number" id="dob" name="dob" required><span>日</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="maritalStatus">配偶者の有無\Marital Status:</label>
+					<div class="radio_value">
+						<input type="radio" id="single" name="maritalStatus" value="single" required>
+						<span>無\Single</span>
+					</div>
+					<div class="radio_value">
+					<input type="radio" id="married" name="maritalStatus" value="married">
+					<span>有\Married</span>
+
+			</div>
+	</div>
+	<div class="form-group">
+		<label for="presentAddress">現住所\Present Address:</label>
+		<textarea id="presentAddress" name="presentAddress" row="2" required></textarea>
+	</div>
+	<div class="form-group">
+		<label for="telNo">電話番号\Tel No:</label>
+		<input type="text" id="telNo" name="telNo" required>
+	</div>
+	<div class="form-group">
+		<label for="mailAddress">メールアドレス\Mail Address:</label>
+		<input type="email" id="mailAddress" name="mailAddress" required>
+	</div>
+	<div class="form-group">
+		<label for="photo">写真\Photo:</label>
+		<input type="file" id="photo" name="photo">
+	</div>
+	<button type="submit" class="not_family_btn"><a href="skill1.html">次へ\Next</a>
+	</button>
+	<a href="login.html" class="back-link">戻り\Back</a>
+	</form>
+	</div>
+</body>
+
+</html>
