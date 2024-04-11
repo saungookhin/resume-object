@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Skil Information2</title>
+	<!-- <link rel="stylesheet" href="css/skill2.css"> -->
+	<link rel="stylesheet" href="css/style.css">
+	</link>
+	<script src="js/skill2.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<h2>スキルと能力\Skill and Abilities</h2>
+		<form id="skillInfoForm">
+			<div class="form-group">
+				<label for="driving">車運単\Driving:</label>
+				<div class="radio_value">
+					<input type="radio" id="yes" name="driving" value="yes" required>
+					<span>有\Yes</span>
+				</div>
+				<div class="radio_value">
+					<input type="radio" id="no" name="driving" value="no">
+					<span>無\No</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="bicycle">自転車\Bicycle:</label>
+				<div class="radio_value">
+					<input type="radio" id="yes" name="bicycle" value="yes" required>
+					<span>有\Yes</span></div>
+					<div class="radio_value">
+						<input type="radio" id="no" name="bicycle" value="no">
+						<span>無\No</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="cooking">料理\Cooking:</label>
+					<div class="radio_value">
+						<input type="radio" id="yes" name="cooking" value="yes" required>
+						<span>有\Yes</span>
+					</div>
+					<div class="radio_value">
+						<input type="radio" id="no" name="cooking" value="no">
+						<span>無\No</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="applyvisa">在留資格申請歴　Applied Visa to Japan?</label>
+					<div class="radio_value">
+						<input type="radio" id="yes" name="applyvisa" value="yes" required>
+						<span>有\Yes</span>
+					</div>
+					<div class="radio_value">
+						<input type="radio" id="no" name="applyvisa" value="no">
+						<span>無\No</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="visa">申請ビザ類 Type of Visa applied?</label>
+					<div class="checkbox_value">
+						<input type="checkbox" id="student" name="visa" value="student" required>
+						<span>留学Student</span>
+						</div>
+						<div class="checkbox_value">
+						<input type="checkbox" id="work" name="visa" value="work">
+						<span>就労Work</span>
+						</div>
+						<div class="checkbox_value">
+						<input type="checkbox" id="titp" name="visa" value="titp">
+						<span>実習生TITP</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="desiredPeriod">希望在留期間　Desired period in Japan:</label>
+					<input type="text" id="desiredPeriod" name="desiredPeriod" required>
+				</div>
+				<div class="form-group">
+					<label for="afterPlan">帰国後の仕事　Plan after coming back:</label>
+					<input type="text" id="afterPlan" name="afterPlan" required>
+				</div>
+				<div class="form-group">
+					<label for="reason">希望動機 Reason for Working in Japan:</label>
+					<textarea id="reason" name="reason" row="4" required></textarea>
+				</div>
+				<button type="submit" class="not_family_btn"><a href="edu.html">次へ\Next</a>
+				</button>
+				<a href="skill1.html" class="back-link">戻り\Back</a>
+		</form>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Information1</title>
+    <!-- <link rel="stylesheet" href="css/skill1.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    </link>
+    <script src="js/skill1.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>スキルと能力\Skill and Abilities</h2>
+        <form id="skillInfoForm">
+            <div class="form-group">
+                <label for="height">身長 Height(cm):</label>
+                <input type="text" id="height" name="height" required>
+            </div>
+            <div class="form-group">
+                <label for="vision">視力 Vision:</label>
+                <div class="radio_value">
+                    <input type="radio" id="left" name="vision" value="left" required>
+                    <span>左 Left</span>
+                </div>
+                <div class="radio_value">
+                    <input type="radio" id="right" name="vision" value="right">
+                    <span>右 Right</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="handedness">利き手 Handedness:</label>
+                <div class="radio_value">
+                    <input type="radio" id="left" name="handedness" value="left" required>
+                    <span>左 Left</span>
+                </div>
+                <div class="radio_value">
+                    <input type="radio" id="right" name="handedness" value="right">
+                    <span>右 Right</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="weight">体重 Weight(kg):</label>
+                <input type="text" id="weight" name="weight" required>
+            </div>
+            <div class="form-group">
+                <label for="color">色覚異常 Color abnormality:</label>
+                <div class="radio_value">
+                        <input type="radio" id="yes" name="color" value="yes" required>
+                        <span>有\Yes</span>
+                    </div>
+                    <div class="radio_value">
+                        <input type="radio" id="no" name="color" value="no">
+                        <span>無\No</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="smoking">タバコを吸っているか Somking?:</label>
+                    <div class="radio_value">
+                        <input type="radio" id="yes" name="smoking" value="yes" required>
+                        <span>有\Yes</span>
+                    </div>
+                    <div class="radio_value">
+                        <input type="radio" id="no" name="smoking" value="no">
+                        <span>無\No</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="bloodType">血液型 Blood Type:</label>
+                    <input type="text" id="bloodType" name="bloodType" required>
+                </div>
+                <div class="form-group">
+                    <label for="glasses">眼鏡 Glasses:</label>
+                    <div class="radio_value">
+                            <input type="radio" id="yes" name="glasses" value="yes" required>
+                            <span>有\Yes</span>
+                        </div>
+                        <div class="radio_value">
+                            <input type="radio" id="no" name="glasses" value="no">
+                            <span>無\No</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="drinking">お酒を飲んでいるか Drink Alcohol?:</label>
+                        <div class="radio_value">
+                                <input type="radio" id="yes" name="drinking" value="yes" required>
+                                <span>有\Yes</span>
+                            </div>
+                            <div class="radio_value">
+                                <input type="radio" id="no" name="drinking" value="no">
+                                <span>無\No</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="japanese">日本語 Japanese:</label>
+                            <div class="japan-group">
+                                <span>勉強期間Period:</span>
+                                <input type="text" id="placeOfBirth" name="placeOfBirth" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="japanese">日本語試験名 Japanese　Exam Name:</label>
+                            <select id="japanese" name="japanese" required>
+                                <option value=""></option>
+                                <option value="jlpt">JLPT</option>
+                                <option value="jft">JFT-Basic</option>
+                                <option value="nattest">NAT-TEST</option>
+                                <option value="other">その他\Others</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="cerfificate">日本語資格　Japanes Qualification:</label>
+                            <select id="certificate" name="certificate" required>
+                                <option value=""></option>
+                                <option value="n1">N1</option>
+                                <option value="n2">N2</option>
+                                <option value="n3">N3</option>
+                                <option value="n4">N4</option>
+                                <option value="n5">N5</option>
+                                <option value="a1">A1</option>
+                                <option value="a2">A2</option>
+                                <option value="b1">B1</option>
+                                <option value="b2">B2</option>
+                                <option value="c1">C1</option>
+                                <option value="c2">C2</option>
+                                <option value="5lvl">5級</option>
+                                <option value="4lvl">4級</option>
+                                <option value="3lvl">3級</option>
+                                <option value="2lvl">2級</option>
+                                <option value="">1級</opti1lvlon>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="skillTest">特定技能試験　Specified Skilled Worker Test:</label>
+                            <div class="skill-group">
+                                <select id="skillTest" name="skillTest" required>
+                                    <option value=""></option>
+                                    <option value="accom">宿泊業</option>
+                                    <option value="restaurant">外食業</option>
+                                    <option value="nurse">介護</option>
+                                </select>
+                                <select id="level" name="level" required>
+                                    <option value=""></option>
+                                    <option value="lvl1">1号</option>
+                                    <option value="lvl2">2号</option>
+                                    <option value="plan">受験予定</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="strongPoint">長所 Strong Point:</label>
+                            <textarea id="strongPoint" name="strongPoint" row="4" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="weakPoint">短所 Weak Point:</label>
+                            <textarea id="weakPoint" name="weakPoint" row="4" required></textarea>
+                        </div>
+                        <button type="submit" class="not_family_btn"><a href="skill2.html">次へ\Next</a>
+                        </button>
+                        <a href="basicinfo.html" class="back-link">戻り\Back</a>
+        </form>
+    </div>
+</body>
+
+</html>

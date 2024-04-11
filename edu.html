@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Education</title>
+	<!-- <link rel="stylesheet" href="css/edu.css"> -->
+	<link rel="stylesheet" href="css/style.css"></link>
+	<script src="js/edu.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<h2>学歴\Education</h2>
+		<form id="educationForm">
+			<div id="educationFields">
+				<div class="education-field">
+					<div class="line">
+						<div class="date_group">
+							<span>入学年月Started:</span>
+							<input type="text" class="startDate" name="startDate" placeholder="YYYY/MM" required
+								pattern="\d{4}/\d{2}">
+							<span>卒業Finished:</span>
+							<input type="text" class="finishDate" name="finishDate" placeholder="YYYY/MM" required
+								pattern="\d{4}/\d{2}">
+						</div>
+						<div class="form-group">
+							<label for="schoolName">学校名School Name:</label>
+							<input type="text" class="schoolName" name="schoolName" required>
+						</div>
+						<div class="form-group">
+							<label for="major">専門Major:</label>
+							<input type="text" class="major" name="major" required>
+						</div>
+						<div class="form-group">
+							<label for="degree">資格Degree:</label>
+							<input type="text" class="degree" name="degree" required>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="addMore">
+				<span class="add-more" onclick="addEducationField()">+ Add More</span>
+			</div>
+			<button type="submit" class="not_family_btn"><a href="work.html">次へ\Next</a>
+			</button>
+			<a href="skill2.html" class="back-link">戻り\Back</a>
+		</form>
+
+	</div>
+</body>
+
+</html>
