@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV FORM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Basic Information -->
+        <form id="basic-info-form" action="inputdata.php" method="POST">
+            <!-- <input type="hidden" name="userId" value="<?php echo $userId; ?>"> -->
+            <h2>基本情報/Basic Information</h2>
+            <div class="form-group">
+                <label for="name">氏名(カタカナ)/Name in Katakana: <span class="required-label">*</span></label>
+                <div class="name-group">
+                    <div class="name-field">
+                        <!-- <label for="first-name">氏:</label> -->
+                        <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                    </div>
+                    <div class="name-field">
+                        <!-- <label for="last-name">名</label> -->
+                        <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name">氏名(ローマ字)/Name in Roman:<span class="required-label">*</span></label>
+                <div class="name-group">
+                    <div class="name-field">
+                        <!-- <label for="family-name">Family name:</label> -->
+                        <input type="text" id="family-name" name="family-name" placeholder="Family Name" required>
+                    </div>
+                    <div class="name-field">
+                        <!-- <label for="given-name">Given name:</label> -->
+                        <input type="text" id="given-name" name="given-name" placeholder="Given Name" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="gender">性別/Gender:<span class="required-label">*</span></label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">男/Male</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">女/Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="marital-status">配偶者の有無/Marital Status:<span class="required-label">*</span></label>
+                <div class="radio-group">
+                    <input type="radio" id="single" name="marital-status" value="single" required>
+                    <label for="single">無/Single</label>
+                    <input type="radio" id="married" name="marital-status" value="married" required>
+                    <label for="married">有/Married</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="dob"><span class="required-label">*</span>生年月日/Date of Birth:</label>
+                <div class="dob-group">
+                    <select id="dob-year" name="dob-year" required>
+                        <option value="">Year</option>
+                        <!-- Add years dynamically -->
+                    </select>
+                    <select id="dob-month" name="dob-month" required>
+                        <option value="">Month</option>
+                        <!-- Add months dynamically -->
+                    </select>
+                    <select id="dob-day" name="dob-day" required>
+                        <option value="">Day</option>
+                        <!-- Add days dynamically -->
+                    </select><br><br>
+                </div>
+            </div>
+            <!-- <div class="form-group">
+                <label for="user-age">歳/Age:</label>
+                <input type="text" id="user-age" name="user-age" placeholder="◯歳" disabled>
+            </div> -->
+            <div class="form-group">
+                <label for="nationality">国類/Nationality:<span class="required-label">*</span></label>
+                <div class="select-group">
+                    <select id="nationality" name="nationality" required>
+                        <option value="" disabled selected>Select Nationality</option>
+                        <option value="myanmar">ミャンマー/Myanmar</option>
+                        <option value="indonesia">インドネシア/Indonesia</option>
+                        <option value="nepal">ネパール/Nepal</option>
+                        <option value="philippines">フィリピン/Philippines</option>
+                        <option value="vietnam">ベトナム/Viet Nam</option>
+                        <option value="thai">タイ/Thailand</option>
+                        <option value="malay">マレーシア/Malaysia</option>
+                        <option value="mongo">モンゴル/Mongolia</option>
+                        <option value="india">インド/India</option>
+                        <option value="bangladesh">バングラデシュ/Bangladesh</option>
+                        <option value="srilanka">スリランカ/Sri Lanka</option>
+                        <option value="pakistan">パキスタン/Pakistan</option>
+                        <option value="singapore">シンガポール/Singapore</option>
+                        <option value="cambodia">カンボジア/Cambodia</option>
+                        <option value="laos">ラオス/Laos</option>
+                        <option value="china">中華人民共和国/China</option>
+                        <option value="korea">大韓民国/Korea</option>
+                        <option value="taiwan">台湾/Taiwan </option>
+                        <option value="japan">日本/Japan</option>
+                        <option value="other">その他/( )</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="place-of-birth">出生地/Place of Birth:</label>
+                <input type="text" id="place-of-birth" name="place-of-birth" placeholder="Place of Birth"
+                    onblur="validateInput(this)">
+            </div>
+            <div class="form-group">
+                <label for="religion">宗教/Religion:</label>
+                <div class="select-group">
+                    <select id="religion" name="religion">
+                        <option value="" disabled selected>Select Religion</option>
+                        <option value="buddhism">仏教/Buddhism</option>
+                        <option value="judaism">ユダヤ教/Judaism</option>
+                        <option value="christian">キリスト教/Christianity</option>
+                        <option value="hindusm">ヒンドゥー教/Hinduism</option>
+                        <option value="islam">イスラム教/Islam</option>
+                        <option value="other">他/Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="tel-no">電話番号/Tel No:<span class="required-label">*</span></label>
+                <input type="tel" id="tel-no" name="tel-no" placeholder="Tel No(eg:123 456 789)"
+                    onblur="validateNumber(this)" required>
+            </div>
+            <div class="form-group">
+                <label for="mail-address">メールアドレス/Mail Address:<span class="required-label">*</span></label>
+                <input type="email" id="mail-address" name="mail-address" placeholder="Mail Address" required>
+            </div>
+            <div class="form-group">
+                <label for="present-address">現住所/Present Address:<span class="required-label">*</span></label>
+                <textarea id="present-address" name="present-address" placeholder="Present Address" rows="2"
+                    onblur="validateInput(this)" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="photo">Upload Photo:<span class="required-label">*</span></label>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+                <label class="photo-warning">※Size:826 pixel(width) x 1062pixel(height)</label>
+                <label class="photo-warning"> Photographs taken within the last 3months</label>
+                <label class="photo-warning"> Your whole face is in the photo</label>
+            </div>
+            <button id="next-skills1" type="submit" class="nextBtn" name="basic_submit">次へ/Next</button>
+            <div>
+                <a href="login.html">戻り/Back</a>
+            </div>
+        </form>
+
+
+        <!-- Skills and Abilities Form -->
+        <form id="skills-form" style="display: none;" action="inputdata.php" method="POST">
+            <h2>スキルと能力/Skills and Abilities</h2>
+            <div class="form-group">
+                <label>利き手/Handedness:<span class="required-label">*</span></label>
+                <div class="radio-group">
+                    <input type="radio" id="left-handed" name="handedness" value="left" required>
+                    <label for="left-handed">左/Left</label>
+                    <input type="radio" id="right-handed" name="handedness" value="right" required>
+                    <label for="right-handed">右/Right</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>色覚異常/Color Abnormality:</label>
+                <div class="radio-group">
+                    <input type="radio" id="normal-color-vision" name="color-abnormality" value="normal">
+                    <label for="normal-color-vision">有/Yes</label>
+                    <input type="radio" id="color-blind" name="color-abnormality" value="color-blind">
+                    <label for="color-blind">無/No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>眼鏡/Glasses:</label>
+                <div class="radio-group">
+                    <input type="radio" id="wearing-glasses" name="glasses" value="yes">
+                    <label for="wearing-glasses">有/Yes</label>
+                    <input type="radio" id="not-wearing-glasses" name="glasses" value="no">
+                    <label for="not-wearing-glasses">無/No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>タバコを吸っているか/Smoking?:</label>
+                <div class="radio-group">
+                    <input type="radio" id="smoker" name="smoking" value="yes">
+                    <label for="smoker">有/Yes</label>
+                    <input type="radio" id="non-smoker" name="smoking" value="no">
+                    <label for="non-smoker">無/No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>お酒を飲んでいるか/Drink Alcohol?:</label>
+                <div class="radio-group">
+                    <input type="radio" id="drinker" name="alcohol" value="yes">
+                    <label for="drinker">有/Yes</label>
+                    <input type="radio" id="non-drinker" name="alcohol" value="no">
+                    <label for="non-drinker">無/No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="vision">視力/Vision:<span class="required-label">*</span></label>
+                <div class="vision-group">
+                    <div class="vision-input">
+                        <label for="left-eye-vision">左/Left:</label>
+                        <input type="text" id="left-eye-vision" name="left-eye-vision" placeholder="Left Eye" required
+                            onblur="validateNumberDecimal(this)">
+                    </div>
+                    <div class="vision-space"></div> <!-- Space between inputs -->
+                    <div class="vision-input">
+                        <label for="right-eye-vision">右/Right:</label>
+                        <input type="text" id="right-eye-vision" name="right-eye-vision" placeholder="Right Eye"
+                            required onblur="validateNumberDecimal(this)">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="height">身長/Height:<span class="required-label">*</span></label>
+                <input type="text" id="height" name="height" placeholder="Height (cm)" required
+                    onblur="validateNumberDecimal(this)">
+            </div>
+            <div class="form-group">
+                <label for="weight">体重/Weight:<span class="required-label">*</span></label>
+                <input type="text" id="weight" name="weight" placeholder="Weight (kg)"
+                    onblur="validateNumberDecimal(this)" required>
+            </div>
+            <div class="form-group">
+                <label for="blood-type">血液型/Blood Type:</label>
+                <div class="select-group">
+                    <select id="blood-type" name="blood-type">
+                        <option value="" disabled selected>Select Blood Type</option>
+                        <option value="a">A</option>
+                        <option value="b">B</option>
+                        <option value="o">O</option>
+                        <option value="ab">AB</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="period">日本語/Japanese:<span class="required-label">*</span></label>
+                <div class="period-group">
+                    <span>勉強時間/Period</span>
+                    <input type="text" id="period" name="period" placeholder="◯年◯か月" onblur="validatePeriod(this)"
+                        required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="japanese-exam">日本語試験名/Japanese Exam Name:<span class="required-label">*</span></label>
+                <select id="japanese-exam" name="japanese-exam" required>
+                    <option value="" disabled selected>Select Japanese Exam</option>
+                    <option value="jlpt">JLPT</option>
+                    <option value="eju">JFT-BASIC</option>
+                    <option value="nat">NAT TEST</option>
+                    <option value="nat">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="japanese-qualification">日本語資格/Japanese Qualification:<span
+                        class="required-label">*</span></label>
+                <select id="japanese-qualification" name="japanese-qualification" required>
+                    <option value="" disabled selected>Select Japanese Qualification</option>
+                    <option value="n1">N1</option>
+                    <option value="n2">N2</option>
+                    <option value="n3">N3</option>
+                    <option value="n4">N4</option>
+                    <option value="n5">N5</option>
+                    <option value="n1">A1</option>
+                    <option value="n2">A2</option>
+                    <option value="n3">B1</option>
+                    <option value="n4">B2</option>
+                    <option value="n5">C1</option>
+                    <option value="n1">C2</option>
+                    <option value="n2">1級</option>
+                    <option value="n3">2級</option>
+                    <option value="n4">3級</option>
+                    <option value="n5">4級</option>
+                    <option value="n5">5級</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="specified-test">特定技能試験/Specified Skilled Worker
+                    Test:<span class="required-label">*</span></label>
+                <select id="test" name="test" required>
+                    <option value="" disabled selected>Select Specified Skilled Worker Test</option>
+                    <option value="accom">宿泊業/Accommodation Industry</option>
+                    <option value="food-service">外食業/Food Service Industry</option>
+                    <option value="building-cleansing">ビルクリーニング業/Building Cleaning Industry</option>
+                    <option value="food-beverage">飲食料品製造業/Food and Beverage Manufacturing Industry</option>
+                    <option value="nurse">介護,製造業/Nursing Care, Manufacturing Industry</option>
+                    <option value="construction">建設業/Construction Industry</option>
+                    <option value="ship">造船・船用工業/Shipbuilding/Ship Industry</option>
+                    <option value="automobile">自動車整備業/Automobile Maintenance Industry</option>
+                    <option value="avitation">航空業/Aviation Industry</option>
+                    <option value="agriculture">農業/Agriculture</option>
+                    <option value="fishery">漁業/Fishery</option>
+                    <option value="car">自動車運送業/Car Transportation Industry</option>
+                    <option value="railway">鉄道/Railway</option>
+                    <option value="forestry">林業/Forestry</option>
+                    <option value="wood">木材産業/Wood Industry</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="skilledworker-qualification">特定技能資格/Specified Skilled
+                    Worker Qualification:<span class="required-label">*</span></label>
+                <select id="level" name="level" required>
+                    <option value="" disabled selected>Select Specified Skilled Worker Qualification</option>
+                    <option value="level-2">2号</option>
+                    <option value="level-1">1号</option>
+                    <option value="plan-exam">受験予定</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="strong-point">長所/Strong Point:<span class="required-label">*</span></label>
+                <textarea id="strong-point" name="strong-point" rows="4" placeholder="例：➀慎重に物事を進める
+    ➁他人の意見を尊重できる
+    ➂集中力が高い" onblur="validateInput(this)" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="weak-point">短所/Weak Point:<span class="required-label">*</span></label>
+                <textarea id="weak-point" name="weak-point" rows="4" placeholder="例：➀決断力が欠けている
+    ➁流されやすい
+    ➂1人で抱え込みすぎる" onblur="validateInput(this)" required></textarea>
+            </div>
+            <button id="next-skills2" type="submit" class="nextBtn" name="skills1_submit">次へ/Next</button>
+            <div id="back-link" class="hidden">
+                <a href="#" id="back">戻り/Back</a>
+            </div>
+        </form>
+
+        <!-- Skill and Abilities Information -->
+        <form id="skills2-form" style="display: none;" action="inputdata.php" method="POST">
+
+            <h2>スキルと能力/Skills and Abilities</h2>
+            <div class="form-group">
+                <label for="driving">車運転/Driving:</label>
+                <div class="radio-group">
+                    <input type="radio" id="driving-yes" name="driving" value="yes">
+                    <label for="driving-yes">有/Yes</label>
+                    <input type="radio" id="driving-no" name="driving" value="no">
+                    <label for="driving-no">無/No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="bicycle">自転車/Bicycle:</label>
+                <div class="radio-group">
+                    <input type="radio" id="bicycle-yes" name="bicycle" value="yes">
+                    <label for="bicycle-yes">有/Yes</label>
+                    <input type="radio" id="bicycle-no" name="bicycle" value="no">
+                    <label for="bicycle-no">無/No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cooking">料理/Cooking:</label>
+                <div class="radio-group">
+                    <input type="radio" id="cooking-yes" name="cooking" value="yes">
+                    <label for="cooking-yes">有/Yes</label>
+                    <input type="radio" id="cooking-no" name="cooking" value="no">
+                    <label for="cooking-no">無/No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="visa-applied">在留資格申請歴/Applied Visa to Japan?:<span class="required-label">*</span></label>
+                <div class="radio-group">
+                    <input type="radio" id="visa-applied-yes" name="visa-applied" value="yes" required>
+                    <label for="visa-applied-yes">有/Yes</label>
+                    <input type="radio" id="visa-applied-no" name="visa-applied" value="no" required>
+                    <label for="visa-applied-no">無/No</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="residence-status">希望在留資格/Desired status of residence:</label>
+                <select id="residence-status" name="residence-status">
+                    <option value="" disabled selected>Select Desired status of residence</option>
+                    <option value="work">就労/Work</option>
+                    <option value="skillworker">特定技能/Specified Skill Worker</option>
+                    <option value="training">実習生/Training</option>
+                    <option value="student">留学/Student</option>
+                    <option value="other">その他/Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="desired-period">希望在留期間/Desired period in Japan:<span class="required-label">*</span></label>
+                <input type="text" id="desired-period" name="desired-period" placeholder="Desired period in Japan"
+                    onblur="validatePeriod(this)" required>
+            </div>
+            <div class="form-group">
+                <label for="reason-for-working">希望動機/Reason for Working in
+                    Japan:<span class="required-label">*</span></label>
+                <textarea id="reason-for-working" name="reason-for-working" placeholder="Reason for Working in Japan"
+                    rows="4" style="resize: none;" onblur="validateInput(this)" required></textarea>
+            </div>
+            <button id="next-edu" type="submit" class="nextBtn" name="skills2_submit">次へ/Next</button>
+            <div id="back-link" class="hidden">
+                <a href="#" id="back">戻り/Back</a>
+            </div>
+        </form>
+
+
+        <!-- Education -->
+        <form id="education-form" style="display: none;" action="inputdata.php" method="POST">
+            <!-- <input type="hidden" name="userId" value="<?php echo $userId; ?>"> -->
+            <h2>学歴/Education</h2>
+            <div class="form-group" id="education-section">
+                <div id="education-count">(1)</div>
+                <div class="section-border">
+                    <div class="form-group">
+                        <div class="education-group">
+                            <div class="education-field">
+                                <label for="started">入学年月/Started:<span class="required-label">*</span></label>
+                                <input type="text" id="started" name="started" placeholder="◯◯◯◯年◯◯月"
+                                    onblur="validatePeriod(this)" required>
+                            </div>
+                            <div class="education-field">
+                                <label for="finished">卒業/Finished:<span class="required-label">*</span></label>
+                                <input type="text" id="finished" name="finished" placeholder="◯◯◯◯年◯◯月"
+                                    onblur="validatePeriod(this)" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="school-name"><span class="required-label">*</span>学校名/School Name:</label>
+                        <input type="text" id="school-name" name="school-name" placeholder="School Name"
+                            onblur="validateInput(this)" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="major">専門/Major:<span class="required-label">*</span></label>
+                        <input type="text" id="major" name="major" placeholder="Major" onblur="validateInput(this)"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="degree">資格/Degree:<span class="required-label">*</span></label>
+                        <input type="text" id="degree" name="degree" placeholder="Degree" onblur="validateInput(this)"
+                            required>
+                    </div>
+                </div>
+            </div>
+            <div id="addMore">
+                <span class="add-more" onclick="addEducationField()">+ Add More</span>
+            </div>
+            <button id="next-work" type="submit" class="nextBtn" name="education_submit">次へ/Next</button>
+            <div id="back-link" class="hidden">
+                <a href="#" id="back">戻り/Back</a>
+            </div>
+        </form>
+
+
+
+        <!-- Work Experience -->
+        <form id="work-form" style="display: none;" action="inputdata.php" method="POST">
+            <!-- <input type="hidden" name="userId" value="<?php echo $userId; ?>"> -->
+            <h2>職歴/Work Experience</h2>
+            <div class="form-group" id="work-section">
+                <div id="work-count">(1)</div>
+                <div class="section-border">
+                    <div class="form-group">
+                        <div class="work-group">
+                            <div class="work-field">
+                                <label for="started">開始年月/Started:</label>
+                                <input type="text" id="started" name="started" placeholder="◯◯◯◯年◯◯月"
+                                    onblur="validatePeriod(this)">
+                            </div>
+                            <div class="work-field">
+                                <label for="finished">終了/Finished:</label>
+                                <input type="text" id="finished" name="finished" placeholder="◯◯◯◯年◯◯月"
+                                    onblur="validatePeriod(this)">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="company-name">社名/CompanyName:</label>
+                        <input type="text" id="company-name" name="company-name" placeholder="CompanyName"
+                            onblur="validateInput(this)">
+                    </div>
+                    <div class="form-group">
+                        <label for="job-type">仕事内容/Type of Job:</label>
+                        <input type="text" id="job-type" name="job-type" placeholder="Type of Job"
+                            onblur="validateInput(this)">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">市名/City:</label>
+                        <input type="text" id="city" name="city" placeholder="City" onblur="validateInput(this)">
+                    </div>
+                </div>
+            </div>
+            <div id="addMore">
+                <span class="add-more" onclick="addWorkField()">+ Add More</span>
+            </div>
+            <button id="next-family" type="submit" class="nextBtn" name="work_submit">次へ/Next</button>
+            <div id="back-link" class="hidden">
+                <a href="#" id="back">戻り/Back</a>
+            </div>
+        </form>
+
+
+        <!-- Family -->
+        <form id="family-form" style="display: none;" action="inputdata.php" method="POST">
+            <!-- <input type="hidden" name="userId" value="<?php echo $userId; ?>"> -->
+            <h2>家族/Family</h2>
+            <div class="form-group" id="family-section">
+                <div id="family-count">(1)</div>
+                <div class="section-border">
+                    <div class="form-group">
+                        <label for="name">氏名/Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Name" onblur="validateInput(this)">
+                    </div>
+                    <div class="form-group">
+                        <label for="relation">続柄/Relation:</label>
+                        <div class="select-group">
+                            <select id="relation" name="relation">
+                                <option value="" disabled selected>Select Relation</option>
+                                <option value="spouse">父/Father</option>
+                                <option value="child">母/Mother</option>
+                                <option value="parent">夫/Husband</option>
+                                <option value="spouse">妻/Wife</option>
+                                <option value="child">娘/Son</option>
+                                <option value="parent">娘/Daughter</option>
+                                <option value="parent">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">年齢/Age:</label>
+                        <input type="text" id="age" name="age" placeholder="Age" onblur="validateInput(this)">
+                    </div>
+                    <div class="form-group">
+                        <label for="work">職業/Work:</label>
+                        <input type="text" id="work" name="work" placeholder="Work" onblur="validateInput(this)">
+                    </div>
+                    <div class="form-group">
+                        <label for="tel-no">電話番号/Tel No:</label>
+                        <input type="tel" id="tel-no" name="tel-no" placeholder="Tel No" onblur="validateInput(this)">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">現住所/Address:</label>
+                        <textarea id="address" name="address" placeholder="Address" rows="2"
+                            onblur="validateInput(this)"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div id="addMore">
+                <span class="add-more" onclick="addFamilyField()">+ Add More</span>
+            </div>
+            <button id="next-other" type="submit" class="nextBtn" name="family_submit">次へ/Next</button>
+            <div id="back-link" class="hidden">
+                <a href="#" id="back">戻り/Back</a>
+            </div>
+        </form>
+
+        <!-- Other -->
+        <form id="other-form" style="display: none;" action="inputdata.php" method="POST">
+
+            <h2></h2>
+            <div class="form-group" id="other-section">
+                <div class="form-group">
+                    <label for="other">その他/Others:</label>
+                    <textarea id="other" name="other" placeholder="Others" rows="5"
+                        onblur="validateInput(this)"></textarea>
+                </div>
+
+            </div>
+            <div class="finish-preview-group">
+                <button class="preview-btn" type="submit">プレビュー/Preview</button>
+                <button class="finish-btn" type="submit" name="other_submit">完了/Finish</button>
+            </div>
+            <div id="back-link" class="hidden">
+                <a href="#" id="back">戻り/Back</a>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
